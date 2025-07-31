@@ -27,6 +27,7 @@
 		EF1BD2742E37EE4400D7C976 /* Art-Inspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art-Inspector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1BD2822E37EE4500D7C976 /* Art-InspectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Art-InspectorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF1BD28C2E37EE4500D7C976 /* Art-InspectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Art-InspectorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFA3D47D2E3AE3C000DA26F7 /* Art-Inspector.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Art-Inspector.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +76,7 @@
 		EF1BD26B2E37EE4400D7C976 = {
 			isa = PBXGroup;
 			children = (
+				EFA3D47D2E3AE3C000DA26F7 /* Art-Inspector.xctestplan */,
 				EF1BD2762E37EE4400D7C976 /* Art-Inspector */,
 				EF1BD2852E37EE4500D7C976 /* Art-InspectorTests */,
 				EF1BD28F2E37EE4500D7C976 /* Art-InspectorUITests */,
@@ -402,6 +404,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Art Inspector";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -429,6 +432,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Art Inspector";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

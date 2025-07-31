@@ -1,0 +1,43 @@
+{
+  "configurations" : [
+    {
+      "id" : "D274387E-965C-42D3-9667-249116677902",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "IDEPreferLogStreaming",
+        "value" : "Yes"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Art-Inspector.xcodeproj",
+      "identifier" : "EF1BD2732E37EE4400D7C976",
+      "name" : "Art-Inspector"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Art-Inspector.xcodeproj",
+        "identifier" : "EF1BD2812E37EE4500D7C976",
+        "name" : "Art-InspectorTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Art-Inspector.xcodeproj",
+        "identifier" : "EF1BD28B2E37EE4500D7C976",
+        "name" : "Art-InspectorUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
