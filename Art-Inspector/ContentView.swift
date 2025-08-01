@@ -1,9 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var droppedURLs: [URL] = []
+//    @State private var droppedURLs: [URL] = []
+    @StateObject private var viewModel = ContentViewModel()
     @State private var isTargeted: Bool = false
-    @State private var selected: URL? = nil
+//    @State private var selected: URL? = nil
 
     var body: some View {
         GeometryReader { geometry in
@@ -14,11 +15,11 @@ struct ContentView: View {
                             Text("Drop files here")
                                 .font(.headline)
                                 .accessibilityIdentifier("dropArea")
-                            if !droppedURLs.isEmpty {
-                                ForEach(droppedURLs, id: \.self) { url in
+                            if !viewModel.droppedURLs.isEmpty {
+                                ForEach(viewModel.droppedURLs, id: \.self) { url in
                                     Button(action: {
                                         print("Text clicked")
-                                        selected = url
+                                        viewModel.selectFile(url)
                                     }) {
                                         Text(url.lastPathComponent)
                                             .font(.subheadline)
@@ -34,7 +35,7 @@ struct ContentView: View {
                         .background(isTargeted ? Color.blue.opacity(0.2) : Color.gray.opacity(0.2))
                         .cornerRadius(10)
                         .dropDestination(for: URL.self) { items, _ in
-                            droppedURLs.append(contentsOf: items)
+                            viewModel.handleDrop(items)
                             print("Dropped URLs: \(items)")
                             return true
                         } isTargeted: { over in
@@ -70,7 +71,7 @@ struct ContentView: View {
                             .accessibilityIdentifier("exportReportButton")
                         }
                         
-                        if !droppedURLs.isEmpty, let selected = selected,
+                        if !viewModel.droppedURLs.isEmpty, let selected = viewModel.selected,
                            let nsImage = NSImage(contentsOf: selected) {
                             Image(nsImage: nsImage)
                                 .resizable()
@@ -85,11 +86,11 @@ struct ContentView: View {
                                 .overlay(Text("Image Preview").foregroundColor(.gray))
                         }
                         
-                        if !droppedURLs.isEmpty, let selected = selected {
+                        if !viewModel.droppedURLs.isEmpty, let selected = viewModel.selected {
                             HStack {
                                 Text("Selected File: \(selected.lastPathComponent)")
                                 Spacer()
-                                Text("\(droppedURLs.count) files dropped")
+                                Text("\(viewModel.droppedURLs.count) files dropped")
                             }
                         }else{
                             Rectangle()

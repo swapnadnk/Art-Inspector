@@ -24,11 +24,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EF1BD2742E37EE4400D7C976 /* Art-Inspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Art-Inspector.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF1BD2822E37EE4500D7C976 /* Art-InspectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Art-InspectorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF1BD28C2E37EE4500D7C976 /* Art-InspectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Art-InspectorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFA3D47D2E3AE3C000DA26F7 /* Art-Inspector.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Art-Inspector.xctestplan"; sourceTree = "<group>"; };
+		EFA3D4CE2E3D14DB00DA26F7 /* Art-InspectorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Art-InspectorTests.xctest"; path = "/Users/swapnadirisala/Documents/training/Swift/Art-Inspector/build/Debug/Art-Inspector.app/Contents/PlugIns/Art-InspectorTests.xctest"; sourceTree = "<absolute>"; };
+		EFA3D4CF2E3D14DB00DA26F7 /* Art-Inspector.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "Art-Inspector.app"; path = "/Users/swapnadirisala/Documents/training/Swift/Art-Inspector/build/Debug/Art-Inspector.app"; sourceTree = "<absolute>"; };
+		EFA3D4D02E3D14DB00DA26F7 /* Art-InspectorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "Art-InspectorUITests.xctest"; path = "/Users/swapnadirisala/Documents/training/Swift/Art-Inspector/build/Debug/Art-InspectorUITests-Runner.app/Contents/PlugIns/Art-InspectorUITests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		EFA3D4982E3B04E900DA26F7 /* Exceptions for "Art-InspectorTests" folder in "Art-InspectorTests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/test.jpg,
+			);
+			target = EF1BD2812E37EE4500D7C976 /* Art-InspectorTests */;
+		};
+		EFA3D4992E3B04E900DA26F7 /* Exceptions for "Art-InspectorTests" folder in "Art-InspectorUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Resources/test.jpg,
+			);
+			target = EF1BD28B2E37EE4500D7C976 /* Art-InspectorUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		EF1BD2762E37EE4400D7C976 /* Art-Inspector */ = {
@@ -38,6 +55,10 @@
 		};
 		EF1BD2852E37EE4500D7C976 /* Art-InspectorTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				EFA3D4982E3B04E900DA26F7 /* Exceptions for "Art-InspectorTests" folder in "Art-InspectorTests" target */,
+				EFA3D4992E3B04E900DA26F7 /* Exceptions for "Art-InspectorTests" folder in "Art-InspectorUITests" target */,
+			);
 			path = "Art-InspectorTests";
 			sourceTree = "<group>";
 		};
@@ -80,18 +101,7 @@
 				EF1BD2762E37EE4400D7C976 /* Art-Inspector */,
 				EF1BD2852E37EE4500D7C976 /* Art-InspectorTests */,
 				EF1BD28F2E37EE4500D7C976 /* Art-InspectorUITests */,
-				EF1BD2752E37EE4400D7C976 /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		EF1BD2752E37EE4400D7C976 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				EF1BD2742E37EE4400D7C976 /* Art-Inspector.app */,
-				EF1BD2822E37EE4500D7C976 /* Art-InspectorTests.xctest */,
-				EF1BD28C2E37EE4500D7C976 /* Art-InspectorUITests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,7 +126,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Art-Inspector";
-			productReference = EF1BD2742E37EE4400D7C976 /* Art-Inspector.app */;
+			productReference = EFA3D4CF2E3D14DB00DA26F7 /* Art-Inspector.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EF1BD2812E37EE4500D7C976 /* Art-InspectorTests */ = {
@@ -139,7 +149,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Art-InspectorTests";
-			productReference = EF1BD2822E37EE4500D7C976 /* Art-InspectorTests.xctest */;
+			productReference = EFA3D4CE2E3D14DB00DA26F7 /* Art-InspectorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		EF1BD28B2E37EE4500D7C976 /* Art-InspectorUITests */ = {
@@ -162,7 +172,7 @@
 			packageProductDependencies = (
 			);
 			productName = "Art-InspectorUITests";
-			productReference = EF1BD28C2E37EE4500D7C976 /* Art-InspectorUITests.xctest */;
+			productReference = EFA3D4D02E3D14DB00DA26F7 /* Art-InspectorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -198,7 +208,7 @@
 			mainGroup = EF1BD26B2E37EE4400D7C976;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = EF1BD2752E37EE4400D7C976 /* Products */;
+			productRefGroup = EF1BD26B2E37EE4400D7C976;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
